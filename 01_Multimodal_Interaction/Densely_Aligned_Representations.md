@@ -18,3 +18,20 @@
    > Visual Features (Keypoints) ⟺ Language Context (Utterances)
    >
    > *시각적 제스처의 타이밍과 발화의 타이밍을 동기화하여 상호 참조 관계 학습*
+## 3. Tasks & Benchmarks
+
+사회적 추론 게임인 'One Night Ultimate Werewolf'를 기반으로 3가지 태스크를 정의했습니다.
+
+| Task | 설명 | 예시 상황 |
+| :--- | :--- | :--- |
+| Speaking Target ID | 청자 식별 | "너 거짓말 하고 있어"라고 할 때 시선이 향한 곳은? |
+| Pronoun Coreference | 대명사 해소 | "He is a werewolf"에서 'He'는 누구인가? |
+| Mentioned Player | 언급 대상 추론 | 이름이 생략되어도 문맥상 누구를 비난하고 있는가? |
+
+
+## 4. Key Results
+
+언어 모델(BERT) 단독 사용 시와 비교했을 때, 제안된 멀티모달 정렬 방식이 압도적인 성능 향상을 보였습니다.
+
+- Language Model Only: 복잡한 상황(거짓말, 비꼬기 등)에서 맥락 파악 실패.
+- Dense Alignment (Ours): 시각적 단서(눈맞춤, 손짓)를 결합하여 모호한 지칭 대상을 성공적으로 추론.
